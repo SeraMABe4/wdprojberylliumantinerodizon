@@ -66,3 +66,122 @@ function prize(){
     document.getElementById("prize").innerHTML = "Oof, you're not quite the pro yet. Have a cupcake 🧁, keep on cooking!";
   }  
 }
+
+
+/******************************************************************************
+For the "FOLLOW ALONG" page - follow.html
+******************************************************************************/
+
+let timerInterval; // To store the timer interval ID
+
+function showRecipe() {
+    const cuisine = document.getElementById('cuisineSelect').value;
+    const recipeDisplay = document.getElementById('recipeDisplay');
+
+    let recipeContent = ''; // This will hold the HTML content for the recipe
+
+    if (cuisine === 'western') {
+        recipeContent = `
+            <h2>Mac and Cheese (Western)</h2>
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+                <li>200g elbow macaroni</li>
+                <li>2 cups shredded cheddar cheese</li>
+                <li>1 cup milk</li>
+                <li>2 tbsp butter</li>
+                <li>2 tbsp flour</li>
+                <li>Salt and pepper to taste</li>
+            </ul>
+            <p><strong>Instructions:</strong></p>
+            <ol>
+                <li>Cook the macaroni according to package instructions.</li>
+                <li>In a saucepan, melt butter, then add flour and stir until smooth.</li>
+                <li>Slowly add milk while stirring to make a thick sauce.</li>
+                <li>Add cheese and stir until melted. <button onclick="startTimer(5)">Start Timer (5 min)</button> <span id="timer"></span></li>
+                <li>Mix the cheese sauce with the cooked macaroni and season with salt and pepper.</li>
+                <li>Serve hot and enjoy!</li>
+            </ol>
+        `;
+    } else if (cuisine === 'asian') {
+        recipeContent = `
+            <h2>Pad Thai (Asian)</h2>
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+                <li>200g rice noodles</li>
+                <li>1 egg</li>
+                <li>100g shrimp, peeled</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 tbsp fish sauce</li>
+                <li>1 tbsp sugar</li>
+                <li>1 tbsp tamarind paste</li>
+                <li>2 tbsp lime juice</li>
+                <li>Chopped peanuts and cilantro for garnish</li>
+            </ul>
+            <p><strong>Instructions:</strong></p>
+            <ol>
+                <li>Cook the rice noodles according to package instructions.</li>
+                <li>In a wok, sauté garlic and shrimp until cooked through.</li>
+                <li>Push the shrimp to the side, crack the egg in the wok and scramble.</li>
+                <li>Add the cooked noodles to the wok and toss with fish sauce, sugar, tamarind paste, and lime juice.</li>
+                <li>Serve with chopped peanuts and cilantro on top.</li>
+            </ol>
+        `;
+    } else if (cuisine === 'european') {
+        recipeContent = `
+            <h2>Currywurst (European)</h2>
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+                <li>4 bratwurst sausages</li>
+                <li>1 cup ketchup</li>
+                <li>1 tbsp curry powder</li>
+                <li>1 tsp smoked paprika</li>
+                <li>1 tsp mustard</li>
+                <li>Salt and pepper to taste</li>
+            </ul>
+            <p><strong>Instructions:</strong></p>
+            <ol>
+                <li>Grill or pan-fry the bratwurst sausages until cooked through.</li>
+                <li>In a separate pan, mix ketchup, curry powder, paprika, mustard, salt, and pepper.</li>
+                <li>Simmer the sauce over low heat for 5 minutes. <button onclick="startTimer(5)">Start Timer (5 min)</button> <span id="timer"></span></li>
+                <li>Slice the sausages and drizzle the curry sauce over them.</li>
+                <li>Serve with fries or bread!</li>
+            </ol>
+        `;
+    }
+
+    // Display the recipe or hide the display if no cuisine is selected
+    if (cuisine) {
+        recipeDisplay.innerHTML = recipeContent;
+        recipeDisplay.style.display = 'block';
+    } else {
+        recipeDisplay.style.display = 'none';
+    }
+}
+
+// Function to start the timer
+function startTimer(minutes) {
+    let seconds = minutes * 60; // Convert minutes to seconds
+    const timerDisplay = document.getElementById('timer');
+    timerDisplay.innerText = formatTime(seconds);
+
+    // Clear any existing timer if the user presses the button again
+    clearInterval(timerInterval);
+
+    // Start a new timer
+    timerInterval = setInterval(() => {
+        seconds--;
+        timerDisplay.innerText = formatTime(seconds);
+
+        if (seconds <= 0) {
+            clearInterval(timerInterval); // Stop the timer when it reaches 0
+            alert("Time's up! The dish is ready.");
+        }
+    }, 1000); // Update every second
+}
+
+// Function to format the time (e.g., 2:30 for 2 minutes and 30 seconds)
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}

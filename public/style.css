@@ -31,8 +31,6 @@ Styles for general use
 body {
   font-family: HK Grotesk;
   background-color: var(--color-bg);
-  padding: 0;
-  margin: 0;
 }
 
 label {
@@ -59,52 +57,32 @@ For (header, footer, logo ALL PAGES
 header {
   left: 0;
   bottom: 0;
-  width: 100%;
+  width:100%;
   margin: 0;
 }
 
-nav { /* this is so that the header is at the top of the screen */
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #1e90ff;  
-  display: flex;
-}
-
-#navigation nav a { 
-  /*display: inline-block; /* This is so that the text button stays inline beside each other */
-  color: white;
-  text-align: center;
-  padding: 10px;
-  text-decoration: none;
-  outline: solid; /* boxes the text buttons */
-}
-
-.maintabs:hover, .maintabs:active { 
-  background-color: #dddddd; /* So that the text button lights up when you hover or click on it */
-  color: gray;
-}
-
-header h1 { 
+header h1{ 
   text-align: left;
   margin-top: 60px;
 }
 
-/*  background-color: #b7dbff;*/
-
-/* Dropdown Styles */
-
-.dropdown{
-  position: relative;
+nav {
+  background-color: #1e90ff;
 }
 
-.dropdown-content a{
-  display: none;
-  position: absolute;
+
+#navigation nav a{ 
+  display: inline-block; /* This is so that the text button stays inline beside each other */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  outline: solid; /* boxes the text buttons */
 }
 
-.dropdown:hover .dropdowncontent{
-  display: block;
+#navigation nav a:hover, #navigation nav a:active{ /* So that the text button lights up when you hover or click on it*/
+  background-color: #dddddd;
 }
 
 /* footer */
@@ -240,7 +218,7 @@ img.pro { /* the trophy award when you click the button (when all meals are chec
 For the "YOUR RECIPES" page - Yours.html
 ******************************************************************************/
 
-button, input {
+button.reward, input {
   font-family: inherit;
   font-size: 100%;
   background: #FFFFFF;
@@ -258,7 +236,7 @@ button, input {
   width: 60%;
 }
 
-#recipecontent > button {
+#recipecontent > button.reward {
   cursor: pointer;
   margin-right: 350px;
 }
