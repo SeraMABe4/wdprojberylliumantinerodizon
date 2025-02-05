@@ -71,16 +71,51 @@ function prize(){
 /******************************************************************************
 For the "MIX AND MOOD" page - mood.html
 ******************************************************************************/
-document.getElementById('moodForm').addEventListener('submit', function(event) {
+document.getElementById('moodForm').addEventListener('submit', function(event) { /* void for now */
     event.preventDefault();
     var emoji = document.getElementById('mood').value;
     console.log('Selected mood:', emoji);
-    // You can now use the variable 'emoji' as needed
 });
 
+function allowDrop(ev) {
+  ev.preventDefault(); // makes the box a valid drop element
+}
 
+function drag(ev) { //makes the element dragable
+  ev.dataTransfer.setData("text", ev.target.id);
+}
 
+function drop(ev) { //lets the item be dropped inside the drop box
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  var targetBox = ev.target;
 
+  //makes sure the box is empty 
+  if (!targetBox.hasChildNodes()) {
+    var draggedElement = document.getElementById(data);
+    targetBox.appendChild(draggedElement);
+  }
+
+  // Checks if all the boxes are filled 
+  checkAllBoxesFilled();
+}
+
+// this is to check if all boxes are filled
+function checkAllBoxesFilled() {
+  var allBoxes = document.querySelectorAll('.sad-items');
+  var allFilled = true;
+
+  // runs through all the boxes to check if any of them are empty
+  allBoxes.forEach(function(box) {
+    if (!box.hasChildNodes()) {
+      allFilled = false; // nothing happens basically here
+    }
+  });
+
+  if (allFilled) {
+    alert("HOORAY! You made Mac and Cheese :D"); //all the boxes are filled yaaay
+  }
+}
 /******************************************************************************
 For the "FOLLOW ALONG" page - follow.html
 ******************************************************************************/

@@ -32,26 +32,44 @@
   
   <br><br>
   
+  <h4> 
+    You've probably already seen the long list of meals you can choose from! Its probably got you feeling super overwhelmed,
+    maybe even a bit tired? For some people, they cure this dillema with food! Have you ever heard of comfort food? It's
+    when you stuff yourself with ice cream until you feel better, or stuff yourself with any kind of food actually. However,
+    it's not only limited to feeling sad, you can eat food when you're angry, tired, or even happy. How about you, what's
+    your mood?
+  </h4>
+  
+  <h4>
+    Pick from the dropdown menu below on what you're feeling, and we'll give you a meal that you'll eat till you're feeling 
+    even happier! Once you've seen the ingredients, try to get it in the correct order to get the supposed meal. If you're
+    feeling stuck, visit the <i>Recipes</i> or <i>Follow Along</i> pages.
+  </h4>
+  
   <form id="moodForm">
   <label for="mood">WHAT'S YOUR MOOD?: </label>
   <select id="mood" name="mood">
     <option value="sad">Sad</option>
-    <option value="happy (not available)">Happy</option>
-    <option value="angry (not available)">Angry</option>
+    <option value="happy">Happy (not available)</option>
+    <option value="angry">Angry (not available)</option>
   </select>
   <button type="submit" class="mood">Submit</button>
 </form>
 
- <div id="drag-and-drop-container">
-    <div class="sad-items-row1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items-row1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items-row2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items-row2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items-row3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items-row3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-  </div>
+<br><br>  
+  
+ <div id="drag-and-drop-container"> <!-- grid for the drag and drop game-->
+    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
 
+<br><br>
 
+  <!-- ingredient pictures-->
 <img id="macaroni" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/macaroni.png?v=1738777523233" draggable="true" ondragstart="drag(event)" width="120" height="120">
 <img id="butter" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/butter.png?v=1738777543895" draggable="true" ondragstart="drag(event)" width="120" height="120">
 <img id="cheese" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/cheese.png?v=1738777534595" draggable="true" ondragstart="drag(event)" width="120" height="120">
