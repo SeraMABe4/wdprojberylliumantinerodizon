@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Dana Joy S. Dizon">
+  <meta name="description" content="Leaving Crumbs">
+  <meta name="keywords" content="Dora, food, cuisine, explore">
+  <title> Leaving Crumbs </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/Logo?v=1735225034313">
+</head>
+  
+<body>
+  <header id = "navigation">
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/recipes.html">Recipes</a>
+      <a href="/follow.html">Follow Along</a>
+      <a href="/mood.html">Mix and Mood</a>
+      <a href="/Yours.html">Your Recipes</a>
+    </nav>
+  </header>
+  
+  <header id = "header">
+    <h1>FOLLOW ALONG</h1>
+    <hr><br>
+    <img class="logo" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/logo?v=1735227668604" alt="logo">
+    <figcaption> <i><u>"The Greatest Cooking Site Since 2009" </u></i> </figcaption>
+  </header>
+  
+  <br><br>
+  
+  <h4> 
+    Have you ever looked at a recipe book and think, "Huh? I don't get how to do any of this!" Well don't worry, because 
+    we got your back. Here's a page dedicated for you if you're having trouble following the instructions of the 
+    recipe procedures.
+  </h4>
+  
+  <h4>
+    First things first, click any recipe from the dropdown menu that you want to make. There's a timer for steps that 
+    need a little patience on. Click the button to start the timer, it'll tell you when a certain step is done.
+    
+  </h4>
+ <div class="container">
+        <h1>Select a Cuisine</h1>
+
+        <select id="cuisineSelect" onchange="showRecipe()">
+            <option value="">Choose a Cuisine</option>
+            <option value="western">Western (Mac and Cheese)</option>
+            <option value="asian">Asian (Pad Thai)</option>
+            <option value="european">European (Currywurst)</option>
+        </select>
+
+        <div id="recipeDisplay" class="recipe">
+            <!-- Recipes will be displayed here -->
+        </div>
+    </div>
+
+
+
+  <footer>
+    &copy; 2024 Antinero, Dizon
+    <ul>
+      <li id = "resources">
+        <a href="/resources.html">Resources</a>
+      </li>
+      <li id = "info">
+        <a href="https://www.facebook.com/share/14vM1VFe5Q/" class="fb" target="_blank"> </a>
+        <a href="https://www.instagram.com/clubgalaxias?igsh=OW8yaTR1MmVhdW9l" class="insta"  target="_blank"></a>
+      </li>
+      <li id = "us">
+        <a> About us</a>
+      </li>
+    </ul>
+  </footer>
+  
+  <script defer src="script.js"></script>
+</body>
+</html>
