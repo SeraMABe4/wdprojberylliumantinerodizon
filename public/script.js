@@ -69,6 +69,19 @@ function prize(){
 
 
 /******************************************************************************
+For the "MIX AND MOOD" page - mood.html
+******************************************************************************/
+document.getElementById('moodForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var emoji = document.getElementById('mood').value;
+    console.log('Selected mood:', emoji);
+    // You can now use the variable 'emoji' as needed
+});
+
+
+
+
+/******************************************************************************
 For the "FOLLOW ALONG" page - follow.html
 ******************************************************************************/
 
@@ -97,7 +110,7 @@ function showRecipe() {
                 <li>Cook the macaroni according to package instructions.</li>
                 <li>In a saucepan, melt butter, then add flour and stir until smooth.</li>
                 <li>Slowly add milk while stirring to make a thick sauce.</li>
-                <li>Add cheese and stir until melted. <button onclick="startTimer(5)">Start Timer (5 min)</button> <span id="timer"></span></li>
+                <li>Add cheese and stir until melted. <button onclick="startTimer(5, 'macAndCheeseTimer')">Start Timer (5 min)</button> <span id="macAndCheeseTimer"></span></li>
                 <li>Mix the cheese sauce with the cooked macaroni and season with salt and pepper.</li>
                 <li>Serve hot and enjoy!</li>
             </ol>
@@ -120,7 +133,8 @@ function showRecipe() {
             <p><strong>Instructions:</strong></p>
             <ol>
                 <li>Cook the rice noodles according to package instructions.</li>
-                <li>In a wok, sauté garlic and shrimp until cooked through.</li>
+                <li>In a wok, sauté garlic for 1 minute. <button onclick="startTimer(1, 'garlicTimer')">Start Timer (1 min)</button> <span id="garlicTimer"></span></li>
+                <li>Add shrimp and sauté for 4 minutes. <button onclick="startTimer(4, 'shrimpTimer')">Start Timer (4 min)</button> <span id="shrimpTimer"></span></li>
                 <li>Push the shrimp to the side, crack the egg in the wok and scramble.</li>
                 <li>Add the cooked noodles to the wok and toss with fish sauce, sugar, tamarind paste, and lime juice.</li>
                 <li>Serve with chopped peanuts and cilantro on top.</li>
@@ -142,7 +156,7 @@ function showRecipe() {
             <ol>
                 <li>Grill or pan-fry the bratwurst sausages until cooked through.</li>
                 <li>In a separate pan, mix ketchup, curry powder, paprika, mustard, salt, and pepper.</li>
-                <li>Simmer the sauce over low heat for 5 minutes. <button onclick="startTimer(5)">Start Timer (5 min)</button> <span id="timer"></span></li>
+                <li>Simmer the sauce over low heat for 5 minutes. <button onclick="startTimer(5, 'currywurstTimer')">Start Timer (5 min)</button> <span id="currywurstTimer"></span></li>
                 <li>Slice the sausages and drizzle the curry sauce over them.</li>
                 <li>Serve with fries or bread!</li>
             </ol>
@@ -159,9 +173,9 @@ function showRecipe() {
 }
 
 // Function to start the timer
-function startTimer(minutes) {
+function startTimer(minutes, timerId) {
     let seconds = minutes * 60; // Convert minutes to seconds
-    const timerDisplay = document.getElementById('timer');
+    const timerDisplay = document.getElementById(timerId);
     timerDisplay.innerText = formatTime(seconds);
 
     // Clear any existing timer if the user presses the button again

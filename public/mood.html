@@ -32,10 +32,34 @@
   
   <br><br>
   
-  <button>
-     WHAT'S YOUR MOOD?
-  </button>
+  <form id="moodForm">
+  <label for="mood">WHAT'S YOUR MOOD?: </label>
+  <select id="mood" name="mood">
+    <option value="sad">Sad</option>
+    <option value="happy (not available)">Happy</option>
+    <option value="angry (not available)">Angry</option>
+  </select>
+  <button type="submit" class="mood">Submit</button>
+</form>
 
+ <div id="drag-and-drop-container">
+    <div class="sad-items-row1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items-row1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items-row2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items-row2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items-row3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="sad-items-row3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  </div>
+
+
+<img id="macaroni" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/macaroni.png?v=1738777523233" draggable="true" ondragstart="drag(event)" width="120" height="120">
+<img id="butter" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/butter.png?v=1738777543895" draggable="true" ondragstart="drag(event)" width="120" height="120">
+<img id="cheese" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/cheese.png?v=1738777534595" draggable="true" ondragstart="drag(event)" width="120" height="120">
+<img id="flour" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/flour.png?v=1738777539134" draggable="true" ondragstart="drag(event)" width="120" height="120">
+<img id="salt" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/salt.png?v=1738777526543" draggable="true" ondragstart="drag(event)" width="120" height="120">
+<img id="pepper" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/pepper.png?v=1738777530410" draggable="true" ondragstart="drag(event)" width="120" height="120">
+  
+<br><br>
   <footer>
     &copy; 2024 Antinero, Dizon
     <ul>
@@ -43,7 +67,8 @@
         <a href="/resources.html">Resources</a>
       </li>
       <li id = "info">
-        <a>Contact Info</a>
+        <a href="https://www.facebook.com/share/14vM1VFe5Q/" class="fb" target="_blank"> </a>
+        <a href="https://www.instagram.com/clubgalaxias?igsh=OW8yaTR1MmVhdW9l" class="insta"  target="_blank"></a>
       </li>
       <li id = "us">
         <a> About us</a>

@@ -107,8 +107,31 @@ li{
   width: 33%;
 }
 
+a.fb {
+  background-image: url("https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/fb.png?v=1738772158378");
+}
 
+a.fb:hover{
+  background-image: url("https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/fbh.png?v=1738772167635");
+  transition-duration: 1s;
+}
 
+a.insta{
+  background-image: url("https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/in.png?v=1738772189442");
+}
+
+a.insta:hover{
+  background-image: url("https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/inh.png?v=1738772201299");
+  transition-duration: 1s;
+}
+
+a.fb, a.insta {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /* logo */
 
@@ -218,7 +241,7 @@ img.pro { /* the trophy award when you click the button (when all meals are chec
 For the "YOUR RECIPES" page - Yours.html
 ******************************************************************************/
 
-button.reward, input {
+button, input, label {
   font-family: inherit;
   font-size: 100%;
   background: #FFFFFF;
@@ -279,3 +302,23 @@ img.cutlery {
 #in1,#out1,#in2,#out2,#in3,#out3,#in4,#out4,#in5,#out5{
   border-bottom: 1px solid black;
 }
+
+
+/* Mix and mood page - mood.html*/
+.mood{
+  all: unset;
+  font-family: inherit;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+#drag-and-drop-container > div {
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  
