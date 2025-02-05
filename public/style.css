@@ -1,0 +1,303 @@
+/******************************************************************************
+START of Glitch hello-app default styles
+******************************************************************************/
+
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+/******************************************************************************
+Styles for general use
+******************************************************************************/
+
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  color: #000000;
+  font-weight: bold;
+}
+
+h4 {
+  text-indent: 50px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  color: grey;
+}
+
+/******************************************************************************
+For (header, footer, logo ALL PAGES
+******************************************************************************/
+
+/* header */
+
+header {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+}
+
+nav { /* this is so that the header is at the top of the screen */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1e90ff;  
+  display: flex;
+}
+
+#navigation nav a { 
+  /*display: inline-block; /* This is so that the text button stays inline beside each other */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  outline: solid; /* boxes the text buttons */
+}
+
+.maintabs:hover, .maintabs:active { 
+  background-color: #dddddd; /* So that the text button lights up when you hover or click on it */
+  color: gray;
+}
+
+header h1 { 
+  text-align: left;
+  margin-top: 60px;
+}
+
+/*  background-color: #b7dbff;*/
+
+/* Dropdown Styles */
+
+.dropdown{
+  position: relative;
+}
+
+.dropdown-content a{
+  display: none;
+  position: absolute;
+}
+
+.dropdown:hover .dropdowncontent{
+  display: block;
+}
+
+/* footer */
+
+footer {
+  color: white;
+  position: sticky; /* this is so that the latter part of the content is not hidden by the footer*/
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1e90ff;
+  text-align: center;
+  overflow: scroll;
+}
+
+#resources a {
+  color: white;
+}
+
+li{
+  display: inline-block;
+  width: 33%;
+}
+
+
+
+
+/* logo */
+
+img.logo {
+  display: block;
+  margin: 0 auto;
+  height: 8%;
+  width: 24%;
+}
+
+/******************************************************************************
+For the "HOME" page - index.html
+******************************************************************************/
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  border: solid;
+  border-width:1px;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+#bio > td {
+  border: none;
+  padding: 10px;
+}
+     
+tr { 
+  padding: 50px;
+}
+
+h2 {
+  text-align: center;
+}
+
+img.chefs { /* pictures of the best world cusine chefs*/
+  display: block;
+  margin: 0 auto;
+  height: 75%;
+  width: 75%;
+}
+
+table.bestchefs { /* container where the pictures of the chefs are --- it's invisible*/
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+/******************************************************************************
+For the "RECIPES" page - recipes.html
+******************************************************************************/
+
+#Western > div, #European > div, #Asian > div {
+  text-indent: 50px;
+}
+
+details { /* indenting of the three main cuisine */
+  margin-bottom: 15px;
+}
+
+img.fpics { /* pictures of the meals*/
+  display: block;
+  margin: 0 auto;
+  height: 30%;
+  width: 30%;
+}
+
+#worldpng { /* design of the bottom of the page */
+  display: block;
+  margin: 0 auto;
+  height: 50%;
+  width: 95%;
+}
+
+button.reward {
+  cursor: pointer; /* makes it so that the button looks clickable */
+  position: center;
+  display: flex; /* lets the element move freely in its own space so that it can be positioned better */
+  position: center;
+}
+
+.reward { /* for the text of the button*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#prize { /* the text when you click the button*/
+  font-size: 30px;
+  text-align: center;
+}
+
+img.pro { /* the trophy award when you click the button (when all meals are checked)*/
+  display: flex;
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
+}
+
+/******************************************************************************
+For the "YOUR RECIPES" page - Yours.html
+******************************************************************************/
+
+button, input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+#userrecipe {
+  display: flex;
+}
+
+#recipecontent input {
+  width: 60%;
+}
+
+#recipecontent > button {
+  cursor: pointer;
+  margin-right: 350px;
+}
+
+#vertical {
+  border-left: 6px solid red;
+  height: 400px;
+  border-radius: 4px;
+}
+
+#ad {
+  display: flex;
+  position: right;
+  text-align: left;
+  font-size: 60px;
+  color: #333;
+  margin-left: 30px;
+}
+
+img.cutlery {
+  height: 15%;
+  width: 30%;
+}
+
+#food { /* sample recipe table --- to be filled out by the user */
+  width: 80%;
+  border-collapse: collapse; /* removes the borders */
+}
+
+/* every style below is for styling the placement of the borders*/
+#fillout {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+#in1, #in2, #in3, #in4, #in5 {
+  border-right: 1px solid black;
+}
+
+#in1,#out1,#in2,#out2,#in3,#out3,#in4,#out4,#in5,#out5{
+  border-bottom: 1px solid black;
+}

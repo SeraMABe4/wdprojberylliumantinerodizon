@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Sera Mari J. Antinero">
+  <meta name="description" content="Leaving Crumbs">
+  <meta name="keywords" content="Dora, food, cuisine, explore">
+  <title> Leaving Crumbs </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/Logo?v=1735225034313">
+</head>
+  
+<body>
+  <header id = "navigation">
+    <nav>
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" class="maintab"> Practice </a>
+        <div class="practice-content">
+          <a href="/recipes.html" class="subtabs"> Recipes </a>
+          <a href="/follow.html" class="subtabs"> Follow Along </a>
+          <a href="/mood.html" class="subtabs"> Mix and Mood </a>
+        </div>
+      </div>
+      <a href="/Yours.html">Yours</a>
+    </nav>
+  </header>
+  
+  <header id = "header">
+    <h1>YOURS</h1>
+    <hr><br>
+    <img class="logo" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/logo?v=1735227668604" alt="logo">
+    <figcaption> <i><u>"The Greatest Cooking Site Since 2009" </u></i> </figcaption>
+  </header>
+  <h4>
+    The world is filled with all sorts of diverse dishes with each recipe showing off what makes each culture unique. 
+    In each corner of the world, there are talented and amazing chefs who share the wonderful gift they have with the
+    people around them. Dear user, don't forget the a cheff must not only have skills, but the heart to make a dish
+    truly exquisite. A quality a chef must have is not only how to use their ingredients effectively, but how to show
+    their love through the meal as well.
+  </h4>
+  
+  <h4>
+    With the formalities aside, why don't you give it a try? Today, you've mastered the cooking skills of each corner
+    of the world, but now it's time to add a little extra spice. This page will let you make your own recipe, just input
+    all the needed information in the text boxes below. Do not forget to add a little of your own personal flavor to 
+    truly make the recipe yours, but also remember to add a little love. Enjoy~ ;)
+  </h4>
+  <hr><br>
+  
+    
+  <section id="userrecipe">
+    <div id= "recipecontent">
+      <!-- there is supposed to be an input tag for the meal picture, but we currently don't know how to do this part -->
+      
+      <input type="text" id="2input" placeholder="title"> <!-- to input meal title -->
+      <button onclick="t()"> Submit </button>
+      <br><br>
+
+      <input type="text" id="3input" placeholder="materials(seperate by comma,no spaces)">
+      <button onclick="mats()"> <!-- to input meal materials -->
+        Submit
+      </button>
+      <br><br>
+
+      <input type="text" id="4input" placeholder="ingredients(seperate by comma,no spaces)">
+      <button onclick="food()"> <!-- to input meal ingredients -->
+        Submit
+      </button>
+      <br><br>
+
+      <input type="text" id="5input" placeholder="procedure(paragraph form)">
+      <button onclick="process()"> <!-- to input meal procedure -->
+        Submit
+      </button>
+    </div>
+   
+    <div id="vertical"> </div>
+    
+    <h3 id="ad">
+      MAKE <br> YOUR <br> OWN <br> RECIPE!
+    </h3>
+    <img class="cutlery" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/cutlery?v=1735229539839">
+  </section>
+
+<br>
+<hr>
+
+  <article id="paper"> <!-- the sample recipe table-->
+    <table id="food" rule="cols"> 
+      <caption> <i><u>Your Sample Recipe Page </u></i> </caption>
+      <tr> <th id="fillout" colspan="2"> Fill out! </th> </tr>
+      <tr> <td id="in1"> picture </td> <td id="out1"> not available </td> </tr>
+      <tr> <td id="in2"> title </td> <td id="out2">  </td> </tr>
+      <tr> <td id="in3"> materials </td> <td id="out3">  </td> </tr>
+      <tr> <td id="in4"> ingredients </td> <td id="out4">  </td> </tr>
+      <tr> <td id="in5"> procedure </td> <td id="out5">  </td> </tr>
+    </table>
+  </article>  
+
+
+  <br><br>
+
+  <footer>
+    &copy; 2024 Antinero, Dizon
+    <ul>
+      <li id = "resources">
+        <a href="/resources.html">Resources</a>
+      </li>
+      <li id = "info">
+        <a>Contact Info</a>
+      </li>
+      <li id = "us">
+        <a> About us</a>
+      </li>
+    </ul>
+  </footer>
+  
+  <script defer src="script.js"></script>
+</body>
+</html>
