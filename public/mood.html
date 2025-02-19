@@ -46,37 +46,47 @@
     feeling stuck, visit the <i>Recipes</i> or <i>Follow Along</i> pages.
   </h4>
   
+<!-- Note: This portion of the page will be void for now, will use it next quarter to further detail the website
   <form id="moodForm">
   <label for="mood">WHAT'S YOUR MOOD?: </label>
   <select id="mood" name="mood">
-    <option value="sad">Sad</option>
-    <option value="happy">Happy (not available)</option>
-    <option value="angry">Angry (not available)</option>
+    <option value="sadness">Sad</option>
+    <option value="joy">Happy</option>
+    <option value="fear">Fear</option>
+    <option value="anger">Angry (Coming soon!)</option>
+    <option value="disgust">Disgust (Coming soon!)</option>
+    
   </select>
   <button type="submit" class="mood">Submit</button>
 </form>
-
-<br><br>  
+--> 
+<hr>
+  <h1 id="mood-header"> ✨ WHAT'S YOUR MOOD? ✨<br><u>😁&nbsp &nbsp &nbsp😭&nbsp &nbsp &nbsp😡&nbsp &nbsp &nbsp😱&nbsp &nbsp &nbsp🤢</u> </h1>
   
- <div id="drag-and-drop-container"> <!-- grid for the drag and drop game-->
-    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="sad-items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br><br> 
+<button onclick="checkOrder()"> Submit </button>
+  <br><br>
+<div class="order" id="order" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div id="ingredient-container"> <!-- grid for the drag and drop game-->
+  <img id="macaroni" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/macaroni.png?v=1738777523233" draggable="true" ondragstart="drag(event)" width="120" height="120">
+  <img id="butter" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/butter.png?v=1738777543895" draggable="true" ondragstart="drag(event)" width="120" height="120">
+  <img id="cheese" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/cheese.png?v=1738777534595" draggable="true" ondragstart="drag(event)" width="120" height="120">
+  <img id="flour" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/flour.png?v=1738777539134" draggable="true" ondragstart="drag(event)" width="120" height="120">
+  <img id="salt" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/salt.png?v=1738777526543" draggable="true" ondragstart="drag(event)" width="120" height="120">
+  <img id="pepper" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/pepper.png?v=1738777530410" draggable="true" ondragstart="drag(event)" width="120" height="120">
+  <br>
+  <div class="ingredient" id="milk" draggable="true" ondragstart="drag(event)" width="120" height="120">milk</div>
+  <div class="ingredient" id="egg" draggable="true" ondragstart="drag(event)" width="120" height="120">egg</div>
+  <div class="ingredient" id="beef" draggable="true" ondragstart="drag(event)" width="120" height="120">beef</div>
+  <div class="ingredient" id="breadcrumbs" draggable="true" ondragstart="drag(event)" width="120" height="120">breadcrumbs</div>
+  <div class="ingredient" id="risotto" draggable="true" ondragstart="drag(event)" width="120" height="120">risotto</div>
+  <div class="ingredient" id="topbun" draggable="true" ondragstart="drag(event)" width="120" height="120">Top Bun</div>
+  <div class="ingredient" id="botbun" draggable="true" ondragstart="drag(event)" width="120" height="120">Bottom Bun</div>
 </div>
 
-<br><br>
-
   <!-- ingredient pictures-->
-<img id="macaroni" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/macaroni.png?v=1738777523233" draggable="true" ondragstart="drag(event)" width="120" height="120">
-<img id="butter" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/butter.png?v=1738777543895" draggable="true" ondragstart="drag(event)" width="120" height="120">
-<img id="cheese" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/cheese.png?v=1738777534595" draggable="true" ondragstart="drag(event)" width="120" height="120">
-<img id="flour" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/flour.png?v=1738777539134" draggable="true" ondragstart="drag(event)" width="120" height="120">
-<img id="salt" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/salt.png?v=1738777526543" draggable="true" ondragstart="drag(event)" width="120" height="120">
-<img id="pepper" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/pepper.png?v=1738777530410" draggable="true" ondragstart="drag(event)" width="120" height="120">
-  
+
 <br><br>
   <footer>
     &copy; 2024 Antinero, Dizon
