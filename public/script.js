@@ -58,7 +58,7 @@ function prize(){
   for (let i=0;i<checks.length; i++){ //adds all the items in the array
     prize += checks[i];
   }
-  if (prize===15) // it equates to three at the moment because those are the only available meals 
+  if (prize===9) // it equates to three at the moment because those are the only available meals 
   {
     document.getElementById("prize").innerHTML = `CONGRATULATIONS YOU ARE A PRO CHEF! <br> <img class="pro" src="https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/award?v=1735225088139" alt="pro chef's award"> <figcaption> 1st place award for most improved chef! </figcaption>`;
   }
@@ -71,51 +71,63 @@ function prize(){
 /******************************************************************************
 For the "MIX AND MOOD" page - mood.html
 ******************************************************************************/
-document.getElementById('moodForm').addEventListener('submit', function(event) { /* void for now */
+
+/******************************************************************************************
+note: void for now, will use it next quarter
+
+document.getElementById('moodForm').addEventListener('submit', function(event) { void for now
     event.preventDefault();
     var emoji = document.getElementById('mood').value;
     console.log('Selected mood:', emoji);
 });
+******************************************************************************************/
 
 function allowDrop(ev) {
-  ev.preventDefault(); // makes the box a valid drop element
+  ev.preventDefault(); // makes the box a valid drop element and prevents browser from doing its default mode
 }
 
-function drag(ev) { //makes the element dragable
-  ev.dataTransfer.setData("text", ev.target.id);
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id); // transfers the data of the object after it is dropped
 }
 
-function drop(ev) { //lets the item be dropped inside the drop box
+function drop(ev) {
   ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
+  var data = ev.dataTransfer.getData("text"); // retrieves id of the object (ingredient)
+  var draggedElement = document.getElementById(data); // get the dragged element
   var targetBox = ev.target;
 
-  //makes sure the box is empty 
-  if (!targetBox.hasChildNodes()) {
-    var draggedElement = document.getElementById(data);
-    targetBox.appendChild(draggedElement);
-  }
-
-  // Checks if all the boxes are filled 
-  checkAllBoxesFilled();
-}
-
-// this is to check if all boxes are filled
-function checkAllBoxesFilled() {
-  var allBoxes = document.querySelectorAll('.sad-items');
-  var allFilled = true;
-
-  // runs through all the boxes to check if any of them are empty
-  allBoxes.forEach(function(box) {
-    if (!box.hasChildNodes()) {
-      allFilled = false; // nothing happens basically here
-    }
-  });
-
-  if (allFilled) {
-    alert("HOORAY! You made Mac and Cheese :D"); //all the boxes are filled yaaay
+  // Only append to "order" div, not other areas
+  if (targetBox.id === "order") {
+    targetBox.appendChild(draggedElement); // append the dragged element to the target box
   }
 }
+
+function checkOrder() { //checks the order
+  var order = document.getElementById("order"); //gets whats the ingredient order that is in the order area
+  var items = order.children; //gets the values of the ingredients inside the order area
+  var UsersAssort = [];
+  for (let i = 0; i < items.length; i++) { //makes an array of the user's assortment of ingredients
+     UsersAssort.push(items[i].id);//goes through what's in items and places it inside the UsersAssort array
+  }
+
+  // these 3 variables below are the meal's ingredient's correct assortment
+  var arancini = ["risotto", "salt", "pepper", "cheese", "flour", "egg", "breadcrumbs"];
+  var macNcheese = ["butter", "flour", "milk", "cheese", "salt", "pepper", "macaroni"];
+  var burger = ["topbun", "egg", "salt", "pepper", "beef", "breadcrumbs", "botbun"];
+
+  if (`${ UsersAssort}` === `${arancini}`) { //checks to see which meals did the user make, or if she got the meal order right
+    alert("HOORAY AND CONGRATULATIONS!! You've made Arancini!");
+  } else if (`${ UsersAssort}` === `${burger}`) {
+    alert("HOORAY AND CONGRATULATIONS!! You've made a Burger");
+  } else if (`${ UsersAssort}` === `${macNcheese}`) {
+    alert("HOORAY AND CONGRATULATIONS!! You've made Mac and Cheese!");
+  } else {
+    alert("Oopsie! Looks like you need to reread the recipe, your assortment of ingredients seem to be wrong. 🤔");
+  }
+}
+
+     
+     
 /******************************************************************************
 For the "FOLLOW ALONG" page - follow.html
 ******************************************************************************/

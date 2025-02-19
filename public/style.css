@@ -28,6 +28,10 @@ END Glitch hello-app default styles
 Styles for general use
 ******************************************************************************/
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: HK Grotesk;
   background-color: var(--color-bg);
@@ -57,11 +61,11 @@ For (header, footer, logo ALL PAGES
 header {
   left: 0;
   bottom: 0;
-  width:100%;
+  width: 100%;
   margin: 0;
 }
 
-header h1{ 
+header h1 {
   text-align: left;
   margin-top: 60px;
 }
@@ -70,8 +74,7 @@ nav {
   background-color: #1e90ff;
 }
 
-
-#navigation nav a{ 
+#navigation nav a {
   display: inline-block; /* This is so that the text button stays inline beside each other */
   color: white;
   text-align: center;
@@ -81,7 +84,9 @@ nav {
   outline: solid; /* boxes the text buttons */
 }
 
-#navigation nav a:hover, #navigation nav a:active{ /* So that the text button lights up when you hover or click on it*/
+#navigation nav a:hover,
+#navigation nav a:active {
+  /* So that the text button lights up when you hover or click on it*/
   background-color: #dddddd;
 }
 
@@ -102,7 +107,7 @@ footer {
   color: white;
 }
 
-li{
+li {
   display: inline-block;
   width: 33%;
 }
@@ -111,21 +116,22 @@ a.fb {
   background-image: url("https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/fb.png?v=1738772158378");
 }
 
-a.fb:hover{
+a.fb:hover {
   background-image: url("https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/fbh.png?v=1738772167635");
   transition-duration: 1s;
 }
 
-a.insta{
+a.insta {
   background-image: url("https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/in.png?v=1738772189442");
 }
 
-a.insta:hover{
+a.insta:hover {
   background-image: url("https://cdn.glitch.global/52666483-76dd-4611-ae19-01ce91b7de36/inh.png?v=1738772201299");
   transition-duration: 1s;
 }
 
-a.fb, a.insta {
+a.fb,
+a.insta {
   width: 28px;
   height: 28px;
   display: inline-block;
@@ -146,14 +152,14 @@ img.logo {
 For the "HOME" page - index.html
 ******************************************************************************/
 
-table{
+table {
   margin-left: auto;
   margin-right: auto;
 }
 
 th {
   border: solid;
-  border-width:1px;
+  border-width: 1px;
   padding: 10px;
 }
 
@@ -165,8 +171,8 @@ td {
   border: none;
   padding: 10px;
 }
-     
-tr { 
+
+tr {
   padding: 50px;
 }
 
@@ -174,39 +180,45 @@ h2 {
   text-align: center;
 }
 
-img.chefs { /* pictures of the best world cusine chefs*/
+img.chefs {
+  /* pictures of the best world cusine chefs*/
   display: block;
   margin: 0 auto;
   height: 75%;
   width: 75%;
 }
 
-table.bestchefs { /* container where the pictures of the chefs are --- it's invisible*/
+table.bestchefs {
+  /* container where the pictures of the chefs are --- it's invisible*/
   border-collapse: collapse;
   width: 100%;
 }
-
 
 /******************************************************************************
 For the "RECIPES" page - recipes.html
 ******************************************************************************/
 
-#Western > div, #European > div, #Asian > div {
+#Western > div,
+#European > div,
+#Asian > div {
   text-indent: 50px;
 }
 
-details { /* indenting of the three main cuisine */
+details {
+  /* indenting of the three main cuisine */
   margin-bottom: 15px;
 }
 
-img.fpics { /* pictures of the meals*/
+img.fpics {
+  /* pictures of the meals*/
   display: block;
   margin: 0 auto;
   height: 30%;
   width: 30%;
 }
 
-#worldpng { /* design of the bottom of the page */
+#worldpng {
+  /* design of the bottom of the page */
   display: block;
   margin: 0 auto;
   height: 50%;
@@ -220,17 +232,20 @@ button.reward {
   position: center;
 }
 
-.reward { /* for the text of the button*/
+.reward {
+  /* for the text of the button*/
   margin-left: auto;
   margin-right: auto;
 }
 
-#prize { /* the text when you click the button*/
+#prize {
+  /* the text when you click the button*/
   font-size: 30px;
   text-align: center;
 }
 
-img.pro { /* the trophy award when you click the button (when all meals are checked)*/
+img.pro {
+  /* the trophy award when you click the button (when all meals are checked)*/
   display: flex;
   margin: 0 auto;
   height: 400px;
@@ -241,10 +256,11 @@ img.pro { /* the trophy award when you click the button (when all meals are chec
 For the "YOUR RECIPES" page - Yours.html
 ******************************************************************************/
 
-button, input, label {
+button,
+input {
   font-family: inherit;
   font-size: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;
@@ -284,7 +300,8 @@ img.cutlery {
   width: 30%;
 }
 
-#food { /* sample recipe table --- to be filled out by the user */
+#food {
+  /* sample recipe table --- to be filled out by the user */
   width: 80%;
   border-collapse: collapse; /* removes the borders */
 }
@@ -295,45 +312,71 @@ img.cutlery {
   border-bottom: 1px solid black;
 }
 
-#in1, #in2, #in3, #in4, #in5 {
+#in1,
+#in2,
+#in3,
+#in4,
+#in5 {
   border-right: 1px solid black;
 }
 
-#in1,#out1,#in2,#out2,#in3,#out3,#in4,#out4,#in5,#out5{
+#in1,
+#out1,
+#in2,
+#out2,
+#in3,
+#out3,
+#in4,
+#out4,
+#in5,
+#out5 {
   border-bottom: 1px solid black;
 }
 
-
 /* Mix and mood page - mood.html*/
 
-/* for the button of the what's your mood form*/
-.mood{
+/***********************************************
+note: void for now, will use next quarter
+for the button of the what's your mood form
+.mood {
   all: unset;
   font-family: inherit;
   font-size: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 5px;
 }
+************************************************/
 
+#mood-header{text-align:center;}
 
-
-#drag-and-drop-container {
-  display: grid;          /* this is so that the elements act like grid elements*/        
-  grid-template-columns: repeat(3, 1fr); /* indicates that there are 3 columns*/
-  grid-template-rows: repeat(2, 200px);  /* indicates that there are 2 rows*/
-  gap: 10px;                       
-  width: 100%;                    
-  height: 400px;                  
+.ingredient {
+  width: 120px;
+  height: 120px;
+  background-color: lightblue;
+  text-align: center;
+  border-radius: 8px;
+  display: inline-block;
 }
+/* note: void for now, will use next quarter
+#drag-and-drop-container {
+  display: grid; /* this is so that the elements act like grid elements
+  grid-template-columns: repeat(3, 1fr); /* indicates that there are 3 columns
+  grid-template-rows: repeat(2, 200px); /* indicates that there are 2 rows
+  gap: 10px;
+  width: 100%;
+  height: 400px;
+}*/
 
-.sad-items {
-  border: 2px solid #ccc;         
-  background-color: #f5f5f5;      
-  min-height: 100px;               
-  display: flex;                  
-  justify-content: center;        
-  align-items: center;    
+.order {
+  margin:0;
+  border: 2px solid #ccc;
+  background-color: #f5f5f5;
+  height: 250px;
+  width: 100%;
+  float: left;
+  justify-content: center;
+  align-items: center;
 }
